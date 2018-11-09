@@ -1,65 +1,57 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+# Kraken Document Manager
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## Getting Started
+To run this app you'll need Laravel, NodeJS. 
+The client app has been built using `React` and the API using `Laravel`.
 
-## About Laravel
+Versions used for this project:
+- NodeJS v10.11.0
+- Laravel 5.7.*
+- React v16.5.2
+- TypeScript v3.1.1
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+## Run in dev mode
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### React frontend
+The FE code is separately packaged into a folder `frontend`. ReactStrap was used to help speed up the build of simple components (https://reactstrap.github.io/components/alerts/).
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+In this folder:
+1. `npm install`
+2. `npm start`
 
-## Learning Laravel
+The App will now be server on `localhost:3000`.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
+#### Testing
+The project uses Jest, with Snapshots to testing, as well as several other libraries e.g. EnzymeJS.
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+To run unit tests:
+`npm run test`
+For test coverage:
+`npm run test:coverage`
 
-## Laravel Sponsors
+### Laravel API setup
+- Copy and rename the .env.example file to .env
+- Copy and rename the .env.testing.example file to .env.testing
+- Create two sqlite DB files in the "database" folder e.g. touch 'db.sqlite', touch 'test.sqlite'
+- Update the database values in both .env files above e.g.
+DB_CONNECTION=sqlite
+DB_DATABASE=/absolute/path/to/your/database/db.sqlite
+- Then install dependencies and migrate e.g.
+1. `composer install`
+2. `php artisan migrate`
+3. `php artisan migrate --seed --env=testing`
+4. `php artisan serve`
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
+The API will be running on `localhost:8000`.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
+####Testing
+In the root of the project:
+- ./vendor/bin/phpunit
 
-## Contributing
+##Notes
+This FE code is using TypeScript and was generated using Create-React-App. Redux is being used for state management. Although I'm familiar with back-end technologies (NodeJS in particular),  this is my first time using Laravel. 
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Todo
+- Add Docker container
+- Better Error handling
+- Modal confirmation for delete
