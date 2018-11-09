@@ -19,23 +19,22 @@ In this folder:
 1. `npm install`
 2. `npm start`
 
-The App will now be server on `localhost:3000`.
+The App will now be served on `localhost:3000`.
 
-#### Testing
-The project uses Jest, with Snapshots to testing, as well as several other libraries e.g. EnzymeJS.
+#### Testing the frontend
+The project uses Jest, with Snapshots for testing, as well as several other libraries e.g. EnzymeJS.
 
-To run unit tests:
-`npm run test`
-For test coverage:
-`npm run test:coverage`
+To run unit tests: `npm run test`. For test coverage: `npm run test:coverage`.
 
 ### Laravel API setup
 - Copy and rename the .env.example file to .env
 - Copy and rename the .env.testing.example file to .env.testing
 - Create two sqlite DB files in the "database" folder e.g. touch 'db.sqlite', touch 'test.sqlite'
 - Update the database values in both .env files above e.g.
+```
 DB_CONNECTION=sqlite
 DB_DATABASE=/absolute/path/to/your/database/db.sqlite
+```
 - Then install dependencies and migrate e.g.
 1. `composer install`
 2. `php artisan migrate`
@@ -44,14 +43,15 @@ DB_DATABASE=/absolute/path/to/your/database/db.sqlite
 
 The API will be running on `localhost:8000`.
 
-####Testing
+#### Testing the API
 In the root of the project:
 - ./vendor/bin/phpunit
 
-##Notes
+## Notes
 This FE code is using TypeScript and was generated using Create-React-App. Redux is being used for state management. Although I'm familiar with back-end technologies (NodeJS in particular),  this is my first time using Laravel. 
 
-## Todo
+## Roadmap
+Things that I would add given more time.
 - Add Docker container
-- Better Error handling
+- Error handling
 - Modal confirmation for delete
