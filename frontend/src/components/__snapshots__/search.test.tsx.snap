@@ -36,12 +36,12 @@ ShallowWrapper {
             ]
           }
         >
-          Search
+          Filter
         </Label>
         <Input
           id="filterDocuments"
           onChange={[MockFunction]}
-          placeholder="Enter search term here..."
+          placeholder="Search by name or type"
           type="text"
           value=""
         />
@@ -68,12 +68,12 @@ ShallowWrapper {
               ]
             }
           >
-            Search
+            Filter
           </Label>,
           <Input
             id="filterDocuments"
             onChange={[MockFunction]}
-            placeholder="Enter search term here..."
+            placeholder="Search by name or type"
             type="text"
             value=""
           />,
@@ -87,7 +87,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": "Search",
+            "children": "Filter",
             "for": "filterDocuments",
             "tag": "label",
             "widths": Array [
@@ -99,7 +99,7 @@ ShallowWrapper {
             ],
           },
           "ref": null,
-          "rendered": "Search",
+          "rendered": "Filter",
           "type": [Function],
         },
         Object {
@@ -109,7 +109,7 @@ ShallowWrapper {
           "props": Object {
             "id": "filterDocuments",
             "onChange": [MockFunction],
-            "placeholder": "Enter search term here...",
+            "placeholder": "Search by name or type",
             "type": "text",
             "value": "",
           },
@@ -144,12 +144,12 @@ ShallowWrapper {
               ]
             }
           >
-            Search
+            Filter
           </Label>
           <Input
             id="filterDocuments"
             onChange={[MockFunction]}
-            placeholder="Enter search term here..."
+            placeholder="Search by name or type"
             type="text"
             value=""
           />
@@ -176,12 +176,12 @@ ShallowWrapper {
                 ]
               }
             >
-              Search
+              Filter
             </Label>,
             <Input
               id="filterDocuments"
               onChange={[MockFunction]}
-              placeholder="Enter search term here..."
+              placeholder="Search by name or type"
               type="text"
               value=""
             />,
@@ -195,7 +195,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "children": "Search",
+              "children": "Filter",
               "for": "filterDocuments",
               "tag": "label",
               "widths": Array [
@@ -207,7 +207,7 @@ ShallowWrapper {
               ],
             },
             "ref": null,
-            "rendered": "Search",
+            "rendered": "Filter",
             "type": [Function],
           },
           Object {
@@ -217,7 +217,7 @@ ShallowWrapper {
             "props": Object {
               "id": "filterDocuments",
               "onChange": [MockFunction],
-              "placeholder": "Enter search term here...",
+              "placeholder": "Search by name or type",
               "type": "text",
               "value": "",
             },

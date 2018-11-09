@@ -17,7 +17,6 @@ const store = createStore<IStoreState, any, any, any>(rootReducer, undefined,
   compose(
     applyMiddleware(
       createAppMiddleware(documentsService.getDocs,
-        documentsService.filterDocs,
         documentsService.deleteDoc,
         documentsService.uploadDoc
       )

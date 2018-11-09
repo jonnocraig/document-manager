@@ -1,5 +1,6 @@
 import * as constants from '../constants';
 import { IDocument } from '../types';
+import { IResponse } from '../services/documents';
 
 
 export interface IGetDocuments {
@@ -62,40 +63,63 @@ export function uploadDocument(document:FormData):IUploadDocument {
 
 export interface IUploadDocumentSuccess {
     type: constants.UPLOAD_DOCUMENT_SUCCESS,
-    payload: IDocument
+    payload: IResponse
 }
 
-export function uploadDocumentSuccess(document:IDocument):IUploadDocumentSuccess {
+export function uploadDocumentSuccess(response:IResponse):IUploadDocumentSuccess {
     return {
         type: constants.UPLOAD_DOCUMENT_SUCCESS,
-        payload: document
+        payload: response
     };
 }
 
 export interface IUploadDocumentFail {
     type: constants.UPLOAD_DOCUMENT_FAIL,
-    payload: string
+    payload: IResponse
 }
 
-export function uploadDocumentFail(errMessage:string):IUploadDocumentFail {
+export function uploadDocumentFail(response:IResponse):IUploadDocumentFail {
     return {
         type: constants.UPLOAD_DOCUMENT_FAIL,
-        payload: errMessage
+        payload: response
     };
 }
 
 export interface IDeleteDocument {
-    type: constants.DELETE_DOCUMENTS,
+    type: constants.DELETE_DOCUMENT,
     payload: number
 }
 
 export function deleteDocument(id:number):IDeleteDocument {
     return {
-        type: constants.DELETE_DOCUMENTS,
+        type: constants.DELETE_DOCUMENT,
         payload: id
     };
 }
 
+export interface IDeleteDocumentSuccess {
+    type: constants.DELETE_DOCUMENT_SUCCESS,
+    payload: IResponse
+}
+
+export function deleteDocumentSuccess(response:IResponse):IDeleteDocumentSuccess {
+    return {
+        type: constants.DELETE_DOCUMENT_SUCCESS,
+        payload: response
+    };
+}
+
+export interface IDeleteDocumentFail {
+    type: constants.DELETE_DOCUMENT_FAIL,
+    payload: IResponse
+}
+
+export function deleteDocumentFail(response:IResponse):IDeleteDocumentFail {
+    return {
+        type: constants.DELETE_DOCUMENT_FAIL,
+        payload: response
+    };
+}
 
 export interface IResetState {
     type: constants.CLEAR_STATE

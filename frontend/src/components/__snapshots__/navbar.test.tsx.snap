@@ -24,7 +24,11 @@ ShallowWrapper {
         <img
           className="logo"
         />
-        Kraken
+        <h1
+          className="logoHeading"
+        >
+          Kraken
+        </h1>
       </NavbarBrand>,
       "color": "dark",
       "dark": true,
@@ -41,7 +45,11 @@ ShallowWrapper {
           <img
             className="logo"
           />,
-          "Kraken",
+          <h1
+            className="logoHeading"
+          >
+            Kraken
+          </h1>,
         ],
         "href": "/",
         "tag": "a",
@@ -60,7 +68,18 @@ ShallowWrapper {
           "rendered": null,
           "type": "img",
         },
-        "Kraken",
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Kraken",
+            "className": "logoHeading",
+          },
+          "ref": null,
+          "rendered": "Kraken",
+          "type": "h1",
+        },
       ],
       "type": [Function],
     },
@@ -79,7 +98,11 @@ ShallowWrapper {
           <img
             className="logo"
           />
-          Kraken
+          <h1
+            className="logoHeading"
+          >
+            Kraken
+          </h1>
         </NavbarBrand>,
         "color": "dark",
         "dark": true,
@@ -96,7 +119,11 @@ ShallowWrapper {
             <img
               className="logo"
             />,
-            "Kraken",
+            <h1
+              className="logoHeading"
+            >
+              Kraken
+            </h1>,
           ],
           "href": "/",
           "tag": "a",
@@ -115,7 +142,18 @@ ShallowWrapper {
             "rendered": null,
             "type": "img",
           },
-          "Kraken",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Kraken",
+              "className": "logoHeading",
+            },
+            "ref": null,
+            "rendered": "Kraken",
+            "type": "h1",
+          },
         ],
         "type": [Function],
       },

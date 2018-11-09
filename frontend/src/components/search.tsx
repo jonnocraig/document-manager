@@ -9,8 +9,8 @@ export interface ISearchProps {
 const List = (props:ISearchProps) => (
   <Form>
     <FormGroup>
-      <Label for="filterDocuments">Search</Label>
-      <Input type="text" id="filterDocuments" placeholder="Enter search term here..." value={props.filter} onChange={props.handleFilter}/>
+      <Label for="filterDocuments">Filter</Label>
+      <Input type="text" id="filterDocuments" placeholder="Search by name or type" value={props.filter} onChange={props.handleFilter}/>
     </FormGroup>
   </Form>
 );

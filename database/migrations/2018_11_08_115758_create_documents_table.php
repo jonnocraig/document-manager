@@ -17,7 +17,8 @@ class CreateDocumentsTable extends Migration
             $table->increments('id');
             $table->string('filename');
             $table->string('originalFilename');
-            $table->integer('fileSize');
+            $table->double('fileSize', 15, 2);
+            $table->string('fileExtension');
             $table->timestamps();
         });
     }

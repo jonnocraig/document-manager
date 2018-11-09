@@ -3,8 +3,14 @@ import { App, IAppProps, IAppDispatchProps } from './App';
 import * as actions from './actions';
 import { IStoreState } from './types';
 
+export const getDocs = (state:IStoreState) => {
+  return state.documents ? 
+    state.documents.filter((doc, i) => doc.originalFilename.includes(state.filter)).sort((doc, prevDoc) => doc.id - prevDoc.id) :
+    null
+};
+
 export const mapStateToProps = (state:IStoreState):IAppProps  => ({
-  documents: state.documents,
+  documents: getDocs(state),
   filter: state.filter,
   loading: state.loading
 });

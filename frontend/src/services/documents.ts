@@ -1,69 +1,76 @@
 import axios from 'axios';
 import * as constants from '../constants';
-import { IDocument } from '../types';
 
-export const documentsApi = axios.create({ baseURL: constants.apiUrl })
-
-export interface IGetDocumentsResult {
-  documents:IDocument[] | null
-}
+export const documentsApi = axios.create({ baseURL: constants.apiUrl });
 
 export interface IGetDocuments {
-  ():Promise<IGetDocumentsResult>
+  ():Promise<IResponse>
 }
 
-export const getDocs:IGetDocuments = ():Promise<IGetDocumentsResult> => {
+export interface IResponse {
+  status: boolean,
+  data: any,
+  message:string
+}
+
+export interface IUploadDocument {
+  (doc:FormData):Promise<IResponse>
+}
+
+export interface IDeleteDocuments {
+  (id:number):Promise<IResponse>
+}
+
+export const getDocs:IGetDocuments = ():Promise<IResponse> => {
   return documentsApi.get('/documents')
     .then((response:any) => {
       return {
-        documents: response.data
+        status: true,
+        data: response.data,
+        message: ''
       };
     })
     .catch((error:any) => {
       return {
-        documents: null
+        status: false,
+        data: null,
+        message: 'An error occurred'
       };
     })
 }
 
-export const filterDocs:IGetDocuments = ():Promise<IGetDocumentsResult> => {
-  return documentsApi.get('/documents')
+export const deleteDoc:IDeleteDocuments = (id:number):Promise<IResponse> => {
+  return documentsApi.delete(`/documents/${id}`)
     .then((response:any) => {
       return {
-        documents: null
+        status: response.data.status,
+        data: response.data.data && Number(response.data.data),
+        message: response.data.message
       };
     })
     .catch((error:any) => {
       return {
-        documents: null
+        status: false,
+        data: null,
+        message: 'An error occurred'
       };
     })
 }
 
-export const deleteDoc:IGetDocuments = ():Promise<IGetDocumentsResult> => {
-  return documentsApi.get('/documents')
+export const uploadDoc:IUploadDocument = (doc:FormData):Promise<IResponse> => {
+  return documentsApi.post('/documents', doc)
     .then((response:any) => {
       return {
-        documents: null
+        status: response.data.status,
+        data: response.data.data && [response.data.data],
+        message: response.data.message
       };
     })
     .catch((error:any) => {
       return {
-        documents: null
-      };
-    })
-}
-
-export const uploadDoc:IGetDocuments = ():Promise<IGetDocumentsResult> => {
-  return documentsApi.get('/documents')
-    .then((response:any) => {
-      return {
-        documents: null
-      };
-    })
-    .catch((error:any) => {
-      return {
-        documents: null
+        status: false,
+        data: null,
+        message: 'An error occurred'
       };
     })
 }

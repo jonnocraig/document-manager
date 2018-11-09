@@ -1,9 +1,11 @@
 import * as React from 'react';
+import { Container, Row, Col } from 'reactstrap';
 import { IDocument } from './types';
 import Nav from './components/navbar';
 import List from './components/list';
 import Search from './components/search';
 import UploadButton from './components/uploadButton';
+import './App.css';
 
 export interface IAppProps {
   documents:IDocument[] | null,
@@ -46,7 +48,7 @@ export class App extends React.PureComponent<IAppProps & IAppDispatchProps, IApp
     if (!files.length) return;
 
     const data = new FormData();
-    data.append('upload', files[0]);
+    data.append('filename', files[0]);
     this.props.handleUploadDoc(data);
   }
 
@@ -56,14 +58,30 @@ export class App extends React.PureComponent<IAppProps & IAppDispatchProps, IApp
     return (
       <React.Fragment>
         <Nav />
-        <h1>Document manager</h1>
-        <Search filter={filter} handleFilter={this.onFilterDocs} />
-        <UploadButton handleUpload={this.onUploadDocument} />
-        { loading ? 
-          <p>Loading...</p> :          
-          <List documents={documents} handleDelete={handleDeleteDoc}></List>
-        }
-      </React.Fragment>
+        <Container>
+          <Row>
+            <Col sm={{ size: 10, offset: 1}}>
+              <h2 className="pageTitle">Document manager</h2>
+            </Col>
+          </Row>
+          <Row>
+            <Col sm={{ size: 4, offset: 1}}>
+              <Search filter={filter} handleFilter={this.onFilterDocs} />
+            </Col>
+            <Col sm={{ size: 4, offset: 1}}>
+              <UploadButton handleUpload={this.onUploadDocument} />
+            </Col>
+          </Row>          
+          <Row>
+            <Col sm={{ size: 10, offset: 1}}>
+              { loading ? 
+                <p>Loading...</p> :          
+                <List filter={filter} documents={documents} handleDelete={handleDeleteDoc}></List>
+              }
+            </Col>
+          </Row>
+        </Container>
+      </React.Fragment>      
     );
   }
 }

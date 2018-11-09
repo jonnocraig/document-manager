@@ -3,6 +3,7 @@ export interface IDocument {
   filename:string,
   originalFilename:string,
   fileSize:number,
+  fileExtension:string,
   created_at:string,
   updated_at:string
 }

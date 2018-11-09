@@ -20,3 +20,8 @@ Object.assign = require('object-assign');
 if (process.env.NODE_ENV === 'test') {
   require('raf').polyfill(global);
 }
+
+function FormDataMock() {
+  this.append = jest.fn();
+}
+global.FormData = FormDataMock

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Documents;
 use Illuminate\Http\Request;
+use Log;
 
 class DocumentsController extends Controller
 {
@@ -34,18 +35,18 @@ class DocumentsController extends Controller
             $fileSize = round($fileSize / 1024, 2); // kilobytes 
             $originalFilename = $file->getClientOriginalName();
             $filename = time().$originalFilename;
+            
             $file->move(public_path().'/files/', $filename);
-         } else {
-             $originalFilename = 'test';
-             $filename = 'test1';
-             $fileSize = 1.34;
+
+            $fileExtension = pathinfo(public_path().'/files/'.$filename, PATHINFO_EXTENSION);
+            //Log::info('File extension2:'.$fileExtension);            
+            $file= new \App\Documents;
+            $file->originalFilename = $originalFilename;
+            $file->filename = $filename;
+            $file->fileSize = $fileSize;
+            $file->fileExtension = $fileExtension;
+            $file->save();
          }
-        $file= new \App\Documents;
-        $file->originalFilename = $originalFilename;
-        $file->filename = $filename;
-        $file->fileSize = $fileSize;
-        $file->save();
-        
         return response()->json([
             'status' => (bool) $file,
             'data'   => $file,
@@ -62,11 +63,19 @@ class DocumentsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // Delete file and remove from the DB too
         $file = \App\Documents::find($id);
-        $status = $file->delete();
+        
+        // Log::info('File name:'.$file->filename);        
+        
+        $status = unlink(public_path().'/files/'.$file->filename);
+        // only delete from DB if already removed from disk
+        if ($status) {
+            $status = $file->delete();
+        }
         return response()->json([
             'status' => $status,
+            'data' => $id,
             'message' => $status ? 'Document Deleted!' : 'Error Deleting Document'
         ]);
     }
