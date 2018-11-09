@@ -28,7 +28,7 @@ const List = (props:ITableProps) => (
             <td>{doc.originalFilename} <em>(created: {doc.created_at})</em></td>
             <td>{doc.fileSize} KB</td>
             <td>{doc.fileExtension}</td>
-            <td><Button color="danger" onClick={() => props.handleDelete(doc.id)}>delete</Button></td>
+            <td><Button id={`deleteButton${i}`} color="danger" onClick={() => props.handleDelete(doc.id)}>Delete</Button></td>
           </tr>
         )}
       </tbody>

@@ -21,7 +21,9 @@ if (process.env.NODE_ENV === 'test') {
   require('raf').polyfill(global);
 }
 
-function FormDataMock() {
-  this.append = jest.fn();
+if (typeof FormData === 'undefined') {
+  function FormDataMock() {
+    this.append = jest.fn();
+  }
+  global.FormData = FormDataMock;
 }
-global.FormData = FormDataMock

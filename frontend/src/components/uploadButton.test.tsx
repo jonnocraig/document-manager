@@ -20,4 +20,11 @@ describe('<UploadButton />', () => {
     const { wrapper } = setup();
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should fire handeUpload if changed', () => {
+    const { props, wrapper } = setup();
+    const event = { preventDefault: jest.fn(), target: {files: [ 'test.txt' ]}};
+    wrapper.find('#uploadDocument').simulate('change', event);
+    expect(props.handleUpload.mock.calls.length).toBe(1);    
+  });
 });

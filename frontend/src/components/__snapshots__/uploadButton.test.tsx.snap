@@ -35,14 +35,24 @@ ShallowWrapper {
             ]
           }
         >
-          Upload
+          Add document
         </Label>
-        <Input
-          id="uploadDocument"
-          name="file"
-          onChange={[MockFunction]}
-          type="file"
-        />
+        <div
+          className="file-input-wrapper"
+        >
+          <Input
+            id="uploadDocument"
+            name="file"
+            onChange={[MockFunction]}
+            type="file"
+          />
+          <Button
+            color="success"
+            tag="button"
+          >
+            Upload
+          </Button>
+        </div>
       </FormGroup>,
       "tag": "form",
     },
@@ -66,14 +76,24 @@ ShallowWrapper {
               ]
             }
           >
-            Upload
+            Add document
           </Label>,
-          <Input
-            id="uploadDocument"
-            name="file"
-            onChange={[MockFunction]}
-            type="file"
-          />,
+          <div
+            className="file-input-wrapper"
+          >
+            <Input
+              id="uploadDocument"
+              name="file"
+              onChange={[MockFunction]}
+              type="file"
+            />
+            <Button
+              color="success"
+              tag="button"
+            >
+              Upload
+            </Button>
+          </div>,
         ],
         "tag": "div",
       },
@@ -84,7 +104,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": "Upload",
+            "children": "Add document",
             "for": "uploadDocument",
             "tag": "label",
             "widths": Array [
@@ -96,22 +116,61 @@ ShallowWrapper {
             ],
           },
           "ref": null,
-          "rendered": "Upload",
+          "rendered": "Add document",
           "type": [Function],
         },
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "host",
           "props": Object {
-            "id": "uploadDocument",
-            "name": "file",
-            "onChange": [MockFunction],
-            "type": "file",
+            "children": Array [
+              <Input
+                id="uploadDocument"
+                name="file"
+                onChange={[MockFunction]}
+                type="file"
+              />,
+              <Button
+                color="success"
+                tag="button"
+              >
+                Upload
+              </Button>,
+            ],
+            "className": "file-input-wrapper",
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "id": "uploadDocument",
+                "name": "file",
+                "onChange": [MockFunction],
+                "type": "file",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Upload",
+                "color": "success",
+                "tag": "button",
+              },
+              "ref": null,
+              "rendered": "Upload",
+              "type": [Function],
+            },
+          ],
+          "type": "div",
         },
       ],
       "type": [Function],
@@ -140,14 +199,24 @@ ShallowWrapper {
               ]
             }
           >
-            Upload
+            Add document
           </Label>
-          <Input
-            id="uploadDocument"
-            name="file"
-            onChange={[MockFunction]}
-            type="file"
-          />
+          <div
+            className="file-input-wrapper"
+          >
+            <Input
+              id="uploadDocument"
+              name="file"
+              onChange={[MockFunction]}
+              type="file"
+            />
+            <Button
+              color="success"
+              tag="button"
+            >
+              Upload
+            </Button>
+          </div>
         </FormGroup>,
         "tag": "form",
       },
@@ -171,14 +240,24 @@ ShallowWrapper {
                 ]
               }
             >
-              Upload
+              Add document
             </Label>,
-            <Input
-              id="uploadDocument"
-              name="file"
-              onChange={[MockFunction]}
-              type="file"
-            />,
+            <div
+              className="file-input-wrapper"
+            >
+              <Input
+                id="uploadDocument"
+                name="file"
+                onChange={[MockFunction]}
+                type="file"
+              />
+              <Button
+                color="success"
+                tag="button"
+              >
+                Upload
+              </Button>
+            </div>,
           ],
           "tag": "div",
         },
@@ -189,7 +268,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "children": "Upload",
+              "children": "Add document",
               "for": "uploadDocument",
               "tag": "label",
               "widths": Array [
@@ -201,22 +280,61 @@ ShallowWrapper {
               ],
             },
             "ref": null,
-            "rendered": "Upload",
+            "rendered": "Add document",
             "type": [Function],
           },
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "host",
             "props": Object {
-              "id": "uploadDocument",
-              "name": "file",
-              "onChange": [MockFunction],
-              "type": "file",
+              "children": Array [
+                <Input
+                  id="uploadDocument"
+                  name="file"
+                  onChange={[MockFunction]}
+                  type="file"
+                />,
+                <Button
+                  color="success"
+                  tag="button"
+                >
+                  Upload
+                </Button>,
+              ],
+              "className": "file-input-wrapper",
             },
             "ref": null,
-            "rendered": null,
-            "type": [Function],
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "id": "uploadDocument",
+                  "name": "file",
+                  "onChange": [MockFunction],
+                  "type": "file",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Upload",
+                  "color": "success",
+                  "tag": "button",
+                },
+                "ref": null,
+                "rendered": "Upload",
+                "type": [Function],
+              },
+            ],
+            "type": "div",
           },
         ],
         "type": [Function],

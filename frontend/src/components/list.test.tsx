@@ -43,17 +43,24 @@ describe('<List />', () => {
   })
 
   it('should a table of documents when documents are passed through', () => {
-    const { wrapper } = setup({ documents: DOCUMENTS_MOCK })
+    const { wrapper } = setup({ documents: DOCUMENTS_MOCK });
     expect(wrapper.find(Button)).toHaveLength(2);
   });
 
   it('should render a friendly message when no documents are passed through', () => {
-    const { wrapper } = setup({ documents: null })
+    const { wrapper } = setup({ documents: null });
     expect(wrapper.find('p').text()).toBe('Such empty? Upload a new document by clicking the Upload button above');
   });
 
   it('should render a friendly message when no documents are found when searching', () => {
-    const { wrapper } = setup({ documents: [], filter:'aa' })
+    const { wrapper } = setup({ documents: [], filter:'aa' });
     expect(wrapper.find('p').text()).toBe('No results found!');
+  });
+
+  it('handleDeleteDoc should get called if delete button pushed', () => {
+    const { wrapper, props } = setup({ documents: DOCUMENTS_MOCK });
+    const event = { preventDefault: jest.fn(), target: { value: 1}};
+    wrapper.find('#deleteButton0').simulate('click', event);
+    expect(props.handleDelete.mock.calls.length).toBe(1);    
   })
 })

@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Form, FormGroup, Label, Input } from 'reactstrap';
+import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import './uploadButton.css';
 
 export interface IUploadButtonProps {
   handleUpload:(evt:any) => void
@@ -8,8 +9,11 @@ export interface IUploadButtonProps {
 const UploadButton = (props:IUploadButtonProps) => (
   <Form>
     <FormGroup>
-      <Label for="uploadDocument">Upload</Label>
-      <Input type="file" name="file" id="uploadDocument" onChange={props.handleUpload} />
+      <Label for="uploadDocument">Add document</Label>
+      <div className="file-input-wrapper">
+        <Input type="file" name="file" id="uploadDocument" onChange={props.handleUpload} />
+        <Button color="success">Upload</Button>
+      </div>
     </FormGroup>
   </Form>
 );
