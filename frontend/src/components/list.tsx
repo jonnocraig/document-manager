@@ -21,8 +21,8 @@ const List = (props:ITableProps) => (
       { props.documents && props.documents.map((doc, i) =>
         <tr key={i}>
           <td>{doc.id}</td>
-          <td>{doc.originalFilename} {doc.created_at}</td>
-          <td>{doc.fileSize}</td>
+          <td>{doc.originalFilename} <em>(created: {doc.created_at})</em></td>
+          <td>{doc.fileSize} KB</td>
           <td><Button color="danger" onClick={() => props.handleDelete(doc.id)}>delete</Button></td>
         </tr>
       )}

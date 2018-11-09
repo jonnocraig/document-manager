@@ -14,10 +14,10 @@ export function getDocuments():IGetDocuments {
 
 export interface IUpdateDocuments {
     type: constants.UPDATE_DOCUMENTS,
-    payload: IDocument[]
+    payload: IDocument[] | null
 }
 
-export function updateDocuments(docs:IDocument[]):IUpdateDocuments {
+export function updateDocuments(docs:IDocument[] | null):IUpdateDocuments {
     return {
         type: constants.UPDATE_DOCUMENTS,
         payload: docs

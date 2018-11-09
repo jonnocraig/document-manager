@@ -4,7 +4,7 @@ import { applyMiddleware, compose, createStore } from 'redux';
 import { rootReducer } from './reducers/index';
 import { IStoreState } from './types/index';
 import { createAppMiddleware } from './middleware/createAppMiddleware';
-import { getDocuments } from './services/getDocuments';
+import * as documentsService from './services/documents';
 import { Provider } from 'react-redux';
 import App from './AppContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -16,7 +16,11 @@ const devTools = (w.devToolsExtension ? w.devToolsExtension() : (f:any) => f);
 const store = createStore<IStoreState, any, any, any>(rootReducer, undefined,
   compose(
     applyMiddleware(
-      createAppMiddleware(getDocuments)
+      createAppMiddleware(documentsService.getDocs,
+        documentsService.filterDocs,
+        documentsService.deleteDoc,
+        documentsService.uploadDoc
+      )
     ),
     devTools
   ));
