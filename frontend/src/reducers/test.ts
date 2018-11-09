@@ -1,5 +1,5 @@
 import { IStoreState } from '../types';
-import { getDocuments, updateDocuments } from '../actions';
+import { updateDocuments } from '../actions';
 import { appReducer } from './';
 
 describe('appReducer', () => {
@@ -18,7 +18,9 @@ describe('appReducer', () => {
   beforeEach(() => {
     newState = null;
     state = {
-      documents: null
+      documents: null,
+      filter: '',
+      loading: false
     };
 
   });

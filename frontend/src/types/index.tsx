@@ -6,6 +6,10 @@ export interface IDocument {
   created_at:string,
   updated_at:string
 }
+
 export interface IStoreState {
-  documents: IDocument[] | null
+  documents: IDocument[] | null,
+  filter: string,
+  loading:boolean
 }
+ 

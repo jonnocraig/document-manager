@@ -1,19 +1,12 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
+import Nav from './navbar';
 
 function setup(nextProps = {}) {
   const props = {
-    documents:null,
-    filter:'',
-    loading:false,
-    handleGetDocs: jest.fn(),
-    handleFilterDocs:jest.fn(),
-    handleDeleteDoc:jest.fn(),
-    handleUploadDoc:jest.fn(),
     ...nextProps
   };
-  const wrapper = shallow(<App {...props} />);//.dive();
+  const wrapper = shallow(<Nav {...props} />);
 
   return {
     props,
@@ -21,10 +14,9 @@ function setup(nextProps = {}) {
   };
 }
 
-describe('<App>', () => {
+describe('<Nav />', () => {
   it('should match the snapshot', () => {
     const { wrapper } = setup();
     expect(wrapper).toMatchSnapshot();
   });
-
 });

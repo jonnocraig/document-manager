@@ -6,7 +6,8 @@ import { IStoreState } from './types/index';
 import { createAppMiddleware } from './middleware/createAppMiddleware';
 import { getDocuments } from './services/getDocuments';
 import { Provider } from 'react-redux';
-import App from './App';
+import App from './AppContainer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const w = (window as any);
 

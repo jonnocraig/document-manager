@@ -7,7 +7,11 @@ const initialDocuments = null;
 
 export const appReducer = combineReducers<IStoreState>({
   documents: (state:IDocument[] | null = initialDocuments, action:actions.IUpdateDocuments) => 
-      action.type === constants.UPDATE_DOCUMENTS ? action.payload : state
+      action.type === constants.UPDATE_DOCUMENTS ? action.payload : state,
+  filter: (state:string = '', action:actions.IFilterDocument) =>
+    action.type === constants.FILTER_DOCUMENTS ? action.payload : state,
+  loading: (state:boolean = false, action:actions.IUpdateIsLoading) =>
+    action.type === constants.IS_LOADING ? action.payload : state
 });
 
 export const rootReducer = (state: IStoreState, action: any): IStoreState => {
