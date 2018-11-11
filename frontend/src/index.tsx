@@ -8,6 +8,10 @@ import * as documentsService from './services/documents';
 import { Provider } from 'react-redux';
 import App from './AppContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faFileUpload, faSearch, faTrash } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faFileUpload, faSearch, faTrash);
 
 const w = (window as any);
 

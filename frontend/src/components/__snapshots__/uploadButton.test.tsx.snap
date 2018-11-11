@@ -22,62 +22,9 @@ ShallowWrapper {
       "children": <FormGroup
         tag="div"
       >
-        <Label
-          for="uploadDocument"
-          tag="label"
-          widths={
-            Array [
-              "xs",
-              "sm",
-              "md",
-              "lg",
-              "xl",
-            ]
-          }
+        <InputGroup
+          tag="div"
         >
-          Add document
-        </Label>
-        <div
-          className="file-input-wrapper"
-        >
-          <Input
-            id="uploadDocument"
-            name="file"
-            onChange={[MockFunction]}
-            type="file"
-          />
-          <Button
-            color="success"
-            tag="button"
-          >
-            Upload
-          </Button>
-        </div>
-      </FormGroup>,
-      "tag": "form",
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "children": Array [
-          <Label
-            for="uploadDocument"
-            tag="label"
-            widths={
-              Array [
-                "xs",
-                "sm",
-                "md",
-                "lg",
-                "xl",
-              ]
-            }
-          >
-            Add document
-          </Label>,
           <div
             className="file-input-wrapper"
           >
@@ -91,35 +38,121 @@ ShallowWrapper {
               color="success"
               tag="button"
             >
-              Upload
+              <FontAwesomeIcon
+                border={false}
+                className=""
+                fixedWidth={false}
+                flip={null}
+                icon="file-upload"
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                title=""
+                transform={null}
+              />
+               Upload
             </Button>
-          </div>,
-        ],
+          </div>
+        </InputGroup>
+      </FormGroup>,
+      "tag": "form",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <InputGroup
+          tag="div"
+        >
+          <div
+            className="file-input-wrapper"
+          >
+            <Input
+              id="uploadDocument"
+              name="file"
+              onChange={[MockFunction]}
+              type="file"
+            />
+            <Button
+              color="success"
+              tag="button"
+            >
+              <FontAwesomeIcon
+                border={false}
+                className=""
+                fixedWidth={false}
+                flip={null}
+                icon="file-upload"
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                title=""
+                transform={null}
+              />
+               Upload
+            </Button>
+          </div>
+        </InputGroup>,
         "tag": "div",
       },
       "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "children": "Add document",
-            "for": "uploadDocument",
-            "tag": "label",
-            "widths": Array [
-              "xs",
-              "sm",
-              "md",
-              "lg",
-              "xl",
-            ],
-          },
-          "ref": null,
-          "rendered": "Add document",
-          "type": [Function],
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <div
+            className="file-input-wrapper"
+          >
+            <Input
+              id="uploadDocument"
+              name="file"
+              onChange={[MockFunction]}
+              type="file"
+            />
+            <Button
+              color="success"
+              tag="button"
+            >
+              <FontAwesomeIcon
+                border={false}
+                className=""
+                fixedWidth={false}
+                flip={null}
+                icon="file-upload"
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                title=""
+                transform={null}
+              />
+               Upload
+            </Button>
+          </div>,
+          "tag": "div",
         },
-        Object {
+        "ref": null,
+        "rendered": Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
@@ -135,7 +168,25 @@ ShallowWrapper {
                 color="success"
                 tag="button"
               >
-                Upload
+                <FontAwesomeIcon
+                  border={false}
+                  className=""
+                  fixedWidth={false}
+                  flip={null}
+                  icon="file-upload"
+                  inverse={false}
+                  listItem={false}
+                  mask={null}
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size={null}
+                  spin={false}
+                  symbol={false}
+                  title=""
+                  transform={null}
+                />
+                 Upload
               </Button>,
             ],
             "className": "file-input-wrapper",
@@ -161,18 +212,67 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "children": "Upload",
+                "children": Array [
+                  <FontAwesomeIcon
+                    border={false}
+                    className=""
+                    fixedWidth={false}
+                    flip={null}
+                    icon="file-upload"
+                    inverse={false}
+                    listItem={false}
+                    mask={null}
+                    pull={null}
+                    pulse={false}
+                    rotation={null}
+                    size={null}
+                    spin={false}
+                    symbol={false}
+                    title=""
+                    transform={null}
+                  />,
+                  " Upload",
+                ],
                 "color": "success",
                 "tag": "button",
               },
               "ref": null,
-              "rendered": "Upload",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "border": false,
+                    "className": "",
+                    "fixedWidth": false,
+                    "flip": null,
+                    "icon": "file-upload",
+                    "inverse": false,
+                    "listItem": false,
+                    "mask": null,
+                    "pull": null,
+                    "pulse": false,
+                    "rotation": null,
+                    "size": null,
+                    "spin": false,
+                    "symbol": false,
+                    "title": "",
+                    "transform": null,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                " Upload",
+              ],
               "type": [Function],
             },
           ],
           "type": "div",
         },
-      ],
+        "type": [Function],
+      },
       "type": [Function],
     },
     "type": [Function],
@@ -186,62 +286,9 @@ ShallowWrapper {
         "children": <FormGroup
           tag="div"
         >
-          <Label
-            for="uploadDocument"
-            tag="label"
-            widths={
-              Array [
-                "xs",
-                "sm",
-                "md",
-                "lg",
-                "xl",
-              ]
-            }
+          <InputGroup
+            tag="div"
           >
-            Add document
-          </Label>
-          <div
-            className="file-input-wrapper"
-          >
-            <Input
-              id="uploadDocument"
-              name="file"
-              onChange={[MockFunction]}
-              type="file"
-            />
-            <Button
-              color="success"
-              tag="button"
-            >
-              Upload
-            </Button>
-          </div>
-        </FormGroup>,
-        "tag": "form",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "children": Array [
-            <Label
-              for="uploadDocument"
-              tag="label"
-              widths={
-                Array [
-                  "xs",
-                  "sm",
-                  "md",
-                  "lg",
-                  "xl",
-                ]
-              }
-            >
-              Add document
-            </Label>,
             <div
               className="file-input-wrapper"
             >
@@ -255,35 +302,121 @@ ShallowWrapper {
                 color="success"
                 tag="button"
               >
-                Upload
+                <FontAwesomeIcon
+                  border={false}
+                  className=""
+                  fixedWidth={false}
+                  flip={null}
+                  icon="file-upload"
+                  inverse={false}
+                  listItem={false}
+                  mask={null}
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size={null}
+                  spin={false}
+                  symbol={false}
+                  title=""
+                  transform={null}
+                />
+                 Upload
               </Button>
-            </div>,
-          ],
+            </div>
+          </InputGroup>
+        </FormGroup>,
+        "tag": "form",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <InputGroup
+            tag="div"
+          >
+            <div
+              className="file-input-wrapper"
+            >
+              <Input
+                id="uploadDocument"
+                name="file"
+                onChange={[MockFunction]}
+                type="file"
+              />
+              <Button
+                color="success"
+                tag="button"
+              >
+                <FontAwesomeIcon
+                  border={false}
+                  className=""
+                  fixedWidth={false}
+                  flip={null}
+                  icon="file-upload"
+                  inverse={false}
+                  listItem={false}
+                  mask={null}
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size={null}
+                  spin={false}
+                  symbol={false}
+                  title=""
+                  transform={null}
+                />
+                 Upload
+              </Button>
+            </div>
+          </InputGroup>,
           "tag": "div",
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "children": "Add document",
-              "for": "uploadDocument",
-              "tag": "label",
-              "widths": Array [
-                "xs",
-                "sm",
-                "md",
-                "lg",
-                "xl",
-              ],
-            },
-            "ref": null,
-            "rendered": "Add document",
-            "type": [Function],
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <div
+              className="file-input-wrapper"
+            >
+              <Input
+                id="uploadDocument"
+                name="file"
+                onChange={[MockFunction]}
+                type="file"
+              />
+              <Button
+                color="success"
+                tag="button"
+              >
+                <FontAwesomeIcon
+                  border={false}
+                  className=""
+                  fixedWidth={false}
+                  flip={null}
+                  icon="file-upload"
+                  inverse={false}
+                  listItem={false}
+                  mask={null}
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size={null}
+                  spin={false}
+                  symbol={false}
+                  title=""
+                  transform={null}
+                />
+                 Upload
+              </Button>
+            </div>,
+            "tag": "div",
           },
-          Object {
+          "ref": null,
+          "rendered": Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
@@ -299,7 +432,25 @@ ShallowWrapper {
                   color="success"
                   tag="button"
                 >
-                  Upload
+                  <FontAwesomeIcon
+                    border={false}
+                    className=""
+                    fixedWidth={false}
+                    flip={null}
+                    icon="file-upload"
+                    inverse={false}
+                    listItem={false}
+                    mask={null}
+                    pull={null}
+                    pulse={false}
+                    rotation={null}
+                    size={null}
+                    spin={false}
+                    symbol={false}
+                    title=""
+                    transform={null}
+                  />
+                   Upload
                 </Button>,
               ],
               "className": "file-input-wrapper",
@@ -325,18 +476,67 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "children": "Upload",
+                  "children": Array [
+                    <FontAwesomeIcon
+                      border={false}
+                      className=""
+                      fixedWidth={false}
+                      flip={null}
+                      icon="file-upload"
+                      inverse={false}
+                      listItem={false}
+                      mask={null}
+                      pull={null}
+                      pulse={false}
+                      rotation={null}
+                      size={null}
+                      spin={false}
+                      symbol={false}
+                      title=""
+                      transform={null}
+                    />,
+                    " Upload",
+                  ],
                   "color": "success",
                   "tag": "button",
                 },
                 "ref": null,
-                "rendered": "Upload",
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "border": false,
+                      "className": "",
+                      "fixedWidth": false,
+                      "flip": null,
+                      "icon": "file-upload",
+                      "inverse": false,
+                      "listItem": false,
+                      "mask": null,
+                      "pull": null,
+                      "pulse": false,
+                      "rotation": null,
+                      "size": null,
+                      "spin": false,
+                      "symbol": false,
+                      "title": "",
+                      "transform": null,
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  " Upload",
+                ],
                 "type": [Function],
               },
             ],
             "type": "div",
           },
-        ],
+          "type": [Function],
+        },
         "type": [Function],
       },
       "type": [Function],

@@ -23,28 +23,40 @@ ShallowWrapper {
       "children": <FormGroup
         tag="div"
       >
-        <Label
-          for="filterDocuments"
-          tag="label"
-          widths={
-            Array [
-              "xs",
-              "sm",
-              "md",
-              "lg",
-              "xl",
-            ]
-          }
+        <InputGroup
+          tag="div"
         >
-          Filter
-        </Label>
-        <Input
-          id="filterDocuments"
-          onChange={[MockFunction]}
-          placeholder="Search by name or type"
-          type="text"
-          value=""
-        />
+          <InputGroupAddon
+            addonType="prepend"
+            tag="div"
+          >
+            <FontAwesomeIcon
+              border={false}
+              className=""
+              fixedWidth={false}
+              flip={null}
+              icon="search"
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              symbol={false}
+              title="Search"
+              transform={null}
+            />
+          </InputGroupAddon>
+          <Input
+            id="filterDocuments"
+            onChange={[MockFunction]}
+            placeholder="Search by name or type"
+            type="text"
+            value=""
+          />
+        </InputGroup>
       </FormGroup>,
       "tag": "form",
     },
@@ -54,98 +66,32 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "children": Array [
-          <Label
-            for="filterDocuments"
-            tag="label"
-            widths={
-              Array [
-                "xs",
-                "sm",
-                "md",
-                "lg",
-                "xl",
-              ]
-            }
-          >
-            Filter
-          </Label>,
-          <Input
-            id="filterDocuments"
-            onChange={[MockFunction]}
-            placeholder="Search by name or type"
-            type="text"
-            value=""
-          />,
-        ],
-        "tag": "div",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "children": "Filter",
-            "for": "filterDocuments",
-            "tag": "label",
-            "widths": Array [
-              "xs",
-              "sm",
-              "md",
-              "lg",
-              "xl",
-            ],
-          },
-          "ref": null,
-          "rendered": "Filter",
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "id": "filterDocuments",
-            "onChange": [MockFunction],
-            "placeholder": "Search by name or type",
-            "type": "text",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
-      "type": [Function],
-    },
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <FormGroup
+        "children": <InputGroup
           tag="div"
         >
-          <Label
-            for="filterDocuments"
-            tag="label"
-            widths={
-              Array [
-                "xs",
-                "sm",
-                "md",
-                "lg",
-                "xl",
-              ]
-            }
+          <InputGroupAddon
+            addonType="prepend"
+            tag="div"
           >
-            Filter
-          </Label>
+            <FontAwesomeIcon
+              border={false}
+              className=""
+              fixedWidth={false}
+              flip={null}
+              icon="search"
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              symbol={false}
+              title="Search"
+              transform={null}
+            />
+          </InputGroupAddon>
           <Input
             id="filterDocuments"
             onChange={[MockFunction]}
@@ -153,8 +99,8 @@ ShallowWrapper {
             type="text"
             value=""
           />
-        </FormGroup>,
-        "tag": "form",
+        </InputGroup>,
+        "tag": "div",
       },
       "ref": null,
       "rendered": Object {
@@ -163,21 +109,29 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": Array [
-            <Label
-              for="filterDocuments"
-              tag="label"
-              widths={
-                Array [
-                  "xs",
-                  "sm",
-                  "md",
-                  "lg",
-                  "xl",
-                ]
-              }
+            <InputGroupAddon
+              addonType="prepend"
+              tag="div"
             >
-              Filter
-            </Label>,
+              <FontAwesomeIcon
+                border={false}
+                className=""
+                fixedWidth={false}
+                flip={null}
+                icon="search"
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                title="Search"
+                transform={null}
+              />
+            </InputGroupAddon>,
             <Input
               id="filterDocuments"
               onChange={[MockFunction]}
@@ -195,19 +149,54 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "children": "Filter",
-              "for": "filterDocuments",
-              "tag": "label",
-              "widths": Array [
-                "xs",
-                "sm",
-                "md",
-                "lg",
-                "xl",
-              ],
+              "addonType": "prepend",
+              "children": <FontAwesomeIcon
+                border={false}
+                className=""
+                fixedWidth={false}
+                flip={null}
+                icon="search"
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                title="Search"
+                transform={null}
+              />,
+              "tag": "div",
             },
             "ref": null,
-            "rendered": "Filter",
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "border": false,
+                "className": "",
+                "fixedWidth": false,
+                "flip": null,
+                "icon": "search",
+                "inverse": false,
+                "listItem": false,
+                "mask": null,
+                "pull": null,
+                "pulse": false,
+                "rotation": null,
+                "size": null,
+                "spin": false,
+                "symbol": false,
+                "title": "Search",
+                "transform": null,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
             "type": [Function],
           },
           Object {
@@ -226,6 +215,215 @@ ShallowWrapper {
             "type": [Function],
           },
         ],
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <FormGroup
+          tag="div"
+        >
+          <InputGroup
+            tag="div"
+          >
+            <InputGroupAddon
+              addonType="prepend"
+              tag="div"
+            >
+              <FontAwesomeIcon
+                border={false}
+                className=""
+                fixedWidth={false}
+                flip={null}
+                icon="search"
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                title="Search"
+                transform={null}
+              />
+            </InputGroupAddon>
+            <Input
+              id="filterDocuments"
+              onChange={[MockFunction]}
+              placeholder="Search by name or type"
+              type="text"
+              value=""
+            />
+          </InputGroup>
+        </FormGroup>,
+        "tag": "form",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <InputGroup
+            tag="div"
+          >
+            <InputGroupAddon
+              addonType="prepend"
+              tag="div"
+            >
+              <FontAwesomeIcon
+                border={false}
+                className=""
+                fixedWidth={false}
+                flip={null}
+                icon="search"
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                title="Search"
+                transform={null}
+              />
+            </InputGroupAddon>
+            <Input
+              id="filterDocuments"
+              onChange={[MockFunction]}
+              placeholder="Search by name or type"
+              type="text"
+              value=""
+            />
+          </InputGroup>,
+          "tag": "div",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <InputGroupAddon
+                addonType="prepend"
+                tag="div"
+              >
+                <FontAwesomeIcon
+                  border={false}
+                  className=""
+                  fixedWidth={false}
+                  flip={null}
+                  icon="search"
+                  inverse={false}
+                  listItem={false}
+                  mask={null}
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size={null}
+                  spin={false}
+                  symbol={false}
+                  title="Search"
+                  transform={null}
+                />
+              </InputGroupAddon>,
+              <Input
+                id="filterDocuments"
+                onChange={[MockFunction]}
+                placeholder="Search by name or type"
+                type="text"
+                value=""
+              />,
+            ],
+            "tag": "div",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "addonType": "prepend",
+                "children": <FontAwesomeIcon
+                  border={false}
+                  className=""
+                  fixedWidth={false}
+                  flip={null}
+                  icon="search"
+                  inverse={false}
+                  listItem={false}
+                  mask={null}
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size={null}
+                  spin={false}
+                  symbol={false}
+                  title="Search"
+                  transform={null}
+                />,
+                "tag": "div",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "border": false,
+                  "className": "",
+                  "fixedWidth": false,
+                  "flip": null,
+                  "icon": "search",
+                  "inverse": false,
+                  "listItem": false,
+                  "mask": null,
+                  "pull": null,
+                  "pulse": false,
+                  "rotation": null,
+                  "size": null,
+                  "spin": false,
+                  "symbol": false,
+                  "title": "Search",
+                  "transform": null,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "id": "filterDocuments",
+                "onChange": [MockFunction],
+                "placeholder": "Search by name or type",
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
         "type": [Function],
       },
       "type": [Function],

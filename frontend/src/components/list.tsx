@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Table, Button  } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IDocument } from '../types';
 
 export interface ITableProps {
@@ -28,7 +29,7 @@ const List = (props:ITableProps) => (
             <td>{doc.originalFilename} <em>(created: {doc.created_at})</em></td>
             <td>{doc.fileSize} KB</td>
             <td>{doc.fileExtension}</td>
-            <td><Button id={`deleteButton${i}`} color="danger" onClick={() => props.handleDelete(doc.id)}>Delete</Button></td>
+            <td><Button id={`deleteButton${i}`} color="danger" onClick={() => props.handleDelete(doc.id)}><FontAwesomeIcon icon="trash" title="Delete dcoument" /> Delete</Button></td>
           </tr>
         )}
       </tbody>
