@@ -8,7 +8,7 @@ export interface ISearchProps {
   handleFilter:(evt:any) => void
 }
 
-const List = (props:ISearchProps) => (
+const SearchButton = (props:ISearchProps) => (
   <Form>
     <FormGroup>
       <InputGroup>
@@ -19,4 +19,4 @@ const List = (props:ISearchProps) => (
   </Form>
 );
 
-export default List;
+export default SearchButton;

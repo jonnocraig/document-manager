@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Table, Button  } from 'reactstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Table } from 'reactstrap';
 import { IDocument } from '../types';
+import DeleteButton from '../components/deleteButton';
 
 export interface ITableProps {
   documents:IDocument[] | null,
@@ -29,7 +29,7 @@ const List = (props:ITableProps) => (
             <td>{doc.originalFilename} <em>(created: {doc.created_at})</em></td>
             <td>{doc.fileSize} KB</td>
             <td>{doc.fileExtension}</td>
-            <td><Button id={`deleteButton${i}`} color="danger" onClick={() => props.handleDelete(doc.id)}><FontAwesomeIcon icon="trash" title="Delete dcoument" /> Delete</Button></td>
+            <td><DeleteButton id={i} itemId={doc.id} handleDelete={props.handleDelete} title="Delete document" /></td>
           </tr>
         )}
       </tbody>

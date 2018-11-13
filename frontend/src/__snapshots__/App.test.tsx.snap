@@ -86,7 +86,7 @@ ShallowWrapper {
                 ]
               }
             >
-              <List
+              <SearchButton
                 filter=""
                 handleFilter={[Function]}
               />
@@ -211,7 +211,7 @@ ShallowWrapper {
                   ]
                 }
               >
-                <List
+                <SearchButton
                   filter=""
                   handleFilter={[Function]}
                 />
@@ -368,7 +368,7 @@ ShallowWrapper {
                     ]
                   }
                 >
-                  <List
+                  <SearchButton
                     filter=""
                     handleFilter={[Function]}
                   />
@@ -405,7 +405,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "children": <List
+                  "children": <SearchButton
                     filter=""
                     handleFilter={[Function]}
                   />,
@@ -614,7 +614,7 @@ ShallowWrapper {
                   ]
                 }
               >
-                <List
+                <SearchButton
                   filter=""
                   handleFilter={[Function]}
                 />
@@ -739,7 +739,7 @@ ShallowWrapper {
                     ]
                   }
                 >
-                  <List
+                  <SearchButton
                     filter=""
                     handleFilter={[Function]}
                   />
@@ -896,7 +896,7 @@ ShallowWrapper {
                       ]
                     }
                   >
-                    <List
+                    <SearchButton
                       filter=""
                       handleFilter={[Function]}
                     />
@@ -933,7 +933,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
-                    "children": <List
+                    "children": <SearchButton
                       filter=""
                       handleFilter={[Function]}
                     />,

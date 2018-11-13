@@ -3,7 +3,7 @@
 exports[`<Search /> should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <List
+  Symbol(enzyme.__unrendered__): <SearchButton
     filter=""
     handleFilter={[MockFunction]}
   />,

@@ -2,6 +2,7 @@ import * as React from 'react';
 import { shallow } from 'enzyme';
 import List from './list';
 import { Button } from 'reactstrap';
+import DeleteButton from './deleteButton';
 
 function setup(nextProps = {}) {
   const props = {
@@ -44,7 +45,7 @@ describe('<List />', () => {
 
   it('should a table of documents when documents are passed through', () => {
     const { wrapper } = setup({ documents: DOCUMENTS_MOCK });
-    expect(wrapper.find(Button)).toHaveLength(2);
+    expect(wrapper.find(DeleteButton)).toHaveLength(2);
   });
 
   it('should render a friendly message when no documents are passed through', () => {
@@ -56,11 +57,5 @@ describe('<List />', () => {
     const { wrapper } = setup({ documents: [], filter:'aa' });
     expect(wrapper.find('p').text()).toBe('No results found!');
   });
-
-  it('handleDeleteDoc should get called if delete button pushed', () => {
-    const { wrapper, props } = setup({ documents: DOCUMENTS_MOCK });
-    const event = { preventDefault: jest.fn(), target: { value: 1}};
-    wrapper.find('#deleteButton0').simulate('click', event);
-    expect(props.handleDelete.mock.calls.length).toBe(1);    
-  })
+  
 })

@@ -26,4 +26,8 @@ if (typeof FormData === 'undefined') {
     this.append = jest.fn();
   }
   global.FormData = FormDataMock;
+  function BlobMock() {
+    this.size = 1;
+  }
+  global.Blob = BlobMock;
 }

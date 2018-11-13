@@ -75,7 +75,7 @@ export class App extends React.PureComponent<IAppProps & IAppDispatchProps, IApp
           <Row>
             <Col sm={{ size: 10, offset: 1}}>
               { loading ? 
-                <p>Loading...</p> :          
+                <p id="loading">Loading...</p> :          
                 <List filter={filter} documents={documents} handleDelete={handleDeleteDoc}></List>
               }
             </Col>
