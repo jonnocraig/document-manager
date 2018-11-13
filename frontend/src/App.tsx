@@ -45,7 +45,7 @@ export class App extends React.PureComponent<IAppProps & IAppDispatchProps, IApp
     evt.preventDefault()
     const { files } = evt.target
 
-    if (!files.length) return;
+    if (!files.length) { return; };
 
     const data = new FormData();
     data.append('filename', files[0]);
@@ -76,7 +76,7 @@ export class App extends React.PureComponent<IAppProps & IAppDispatchProps, IApp
             <Col sm={{ size: 10, offset: 1}}>
               { loading ? 
                 <p id="loading">Loading...</p> :          
-                <List filter={filter} documents={documents} handleDelete={handleDeleteDoc}></List>
+                <List filter={filter} documents={documents} handleDelete={handleDeleteDoc} />
               }
             </Col>
           </Row>

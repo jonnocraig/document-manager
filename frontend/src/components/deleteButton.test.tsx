@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { Modal } from 'reactstrap';
 import DeleteButton from './deleteButton';
 

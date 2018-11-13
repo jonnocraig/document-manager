@@ -3,9 +3,7 @@ import * as constants from '../constants';
 
 export const documentsApi = axios.create({ baseURL: constants.apiUrl });
 
-export interface IGetDocuments {
-  ():Promise<IResponse>
-}
+export type IGetDocuments = () =>Promise<IResponse>;
 
 export interface IResponse {
   status: boolean,
@@ -13,13 +11,9 @@ export interface IResponse {
   message:string
 }
 
-export interface IUploadDocument {
-  (doc:FormData):Promise<IResponse>
-}
+export type IUploadDocument = (doc:FormData) =>Promise<IResponse>;
 
-export interface IDeleteDocuments {
-  (id:number):Promise<IResponse>
-}
+export type IDeleteDocuments = (id:number) =>Promise<IResponse>;
 
 export const getDocs:IGetDocuments = ():Promise<IResponse> => {
   return documentsApi.get('/documents')

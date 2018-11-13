@@ -22,11 +22,11 @@ const errorMock = {
 };
 let mock:any;
 
-beforeEach(function() {
+beforeEach(() => {
   mock = new MockAdapter(documentsApi);
 });
 
-afterEach(function() {
+afterEach(() => {
   mock.reset();
 });
 
