@@ -10,6 +10,23 @@ Versions used for this project:
 - React v16.5.2
 - TypeScript v3.1.1
 
+## Run in production
+Change the `.env` file property:
+```
+APP_ENV=local
+to
+APP_ENV=Production
+```
+Build the front-end:
+```
+cd frontend
+npm run build
+```
+This should produce a `static` folder inside the `public` folder which will hold all the built and minified FE code.
+
+In the project root, then run `php artisan serve` which will serve up the project on port 8000.
+
+
 ## Run in dev mode
 
 ### React frontend
@@ -19,7 +36,7 @@ In this folder:
 1. `npm install`
 2. `npm start`
 
-The App will now be served on `localhost:3000`.
+The app will now be served on `localhost:3000`. Although for dev purposes we'll be loading the app with php as below.
 
 #### Testing the frontend
 The project uses Jest, with Snapshots for testing, as well as several other libraries e.g. EnzymeJS.
@@ -41,7 +58,7 @@ DB_DATABASE=/absolute/path/to/your/database/db.sqlite
 3. `php artisan migrate --seed --env=testing`
 4. `php artisan serve`
 
-The API will be running on `localhost:8000`.
+The API will be running on `localhost:8000` and the app will also be served there.
 
 #### Testing the API
 In the root of the project:

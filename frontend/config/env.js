@@ -77,6 +77,8 @@ function getClientEnvironment(publicUrl) {
         // This should only be used as an escape hatch. Normally you would put
         // images into the `src` and `import` them in code to get their paths.
         PUBLIC_URL: publicUrl,
+        'REACT_APP_HMR_HOSTNAME': process.env.HOST || 'localhost',
+        'REACT_APP_HMR_PORT': process.env.PORT || '3000'
       }
     );
   // Stringify all values so we can feed into Webpack DefinePlugin

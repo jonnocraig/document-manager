@@ -9,15 +9,15 @@
     <title>{{ config('app.name') }}</title>
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Lato" rel="stylesheet" />
     @if (env('APP_ENV') == 'Production')
-        <script src="/dist/styles.css"></script>
+        <link href="/static/css/styles.css" rel="stylesheet" />
     @endif
 </head>
 
 <body>
-    <div id="app"></div>
+    <div id="root"></div>
     
     @if (env('APP_ENV') == 'Production')
-    <script src="/dist/bundle.js"></script>
+    <script src="/static/js/bundle.js"></script>
     @else
     <script src="http://localhost:3000/static/js/bundle.js"></script>
     @endif

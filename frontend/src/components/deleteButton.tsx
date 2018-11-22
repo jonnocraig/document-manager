@@ -28,7 +28,7 @@ class DeleteButton extends React.Component<IDeleteProps, IDeleteState> {
     });
   }
 
-  handleConfirmDelete(evt:any) {
+  handleConfirmDelete = (evt:any) => {
     evt.preventDefault();
     this.props.handleDelete(this.props.itemId)
     this.toggle();
