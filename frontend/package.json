@@ -1,5 +1,5 @@
 {
-  "name": "kraken-documents",
+  "name": "document-manager",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

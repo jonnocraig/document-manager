@@ -27,7 +27,7 @@ ShallowWrapper {
         <h1
           className="logoHeading"
         >
-          Kraken
+          Document Manager
         </h1>
       </NavbarBrand>,
       "color": "dark",
@@ -48,7 +48,7 @@ ShallowWrapper {
           <h1
             className="logoHeading"
           >
-            Kraken
+            Document Manager
           </h1>,
         ],
         "href": "/",
@@ -73,11 +73,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Kraken",
+            "children": "Document Manager",
             "className": "logoHeading",
           },
           "ref": null,
-          "rendered": "Kraken",
+          "rendered": "Document Manager",
           "type": "h1",
         },
       ],
@@ -101,7 +101,7 @@ ShallowWrapper {
           <h1
             className="logoHeading"
           >
-            Kraken
+            Document Manager
           </h1>
         </NavbarBrand>,
         "color": "dark",
@@ -122,7 +122,7 @@ ShallowWrapper {
             <h1
               className="logoHeading"
             >
-              Kraken
+              Document Manager
             </h1>,
           ],
           "href": "/",
@@ -147,11 +147,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Kraken",
+              "children": "Document Manager",
               "className": "logoHeading",
             },
             "ref": null,
-            "rendered": "Kraken",
+            "rendered": "Document Manager",
             "type": "h1",
           },
         ],

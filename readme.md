@@ -1,4 +1,4 @@
-# Kraken Document Manager
+# Document Manager
 
 ## Getting Started
 To run this app you'll need Laravel, NodeJS. 

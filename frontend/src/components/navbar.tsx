@@ -7,7 +7,7 @@ const Nav = () => (
   <Navbar color="dark" dark expand="md">
     <NavbarBrand href="/">
       <img className="logo" src={logo} />
-      <h1 className="logoHeading">Kraken</h1>
+      <h1 className="logoHeading">Document Manager</h1>
     </NavbarBrand>    
   </Navbar>
 );

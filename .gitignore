@@ -1,5 +1,6 @@
 /public/hot
 /public/storage
+/public/static
 /public/files
 /storage/*.key
 /vendor
